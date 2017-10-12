@@ -65,5 +65,26 @@ namespace LabsApp.Dominio
                 cantSillas = unaCantSillas;
             }
         }
+
+        public Laboratorio()
+        {
+            nombre = "unNombre";
+            numero = 000;
+            cantEquipos = 0;
+            cantSillas = 0;
+        }
+
+        public Laboratorio(string unNombre, int unNumero, int unaCantEquipos, int unaCantSillas)
+        {
+            nombre = unNombre;
+            numero = unNumero;
+            cantEquipos = unaCantEquipos;
+            cantSillas = unaCantSillas;
+        }
+
+        public override string ToString()
+        {
+            return nombre+"\n"+numero;
+        }
     }
 }
