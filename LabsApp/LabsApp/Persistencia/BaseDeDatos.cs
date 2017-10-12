@@ -25,5 +25,16 @@ namespace LabsApp.Persistencia
             return listaLaboratorio;
         }
 
+        public void agregarReserva(Reserva unaReserva) {
+            this.listaReservas.Add(unaReserva); 
+        }
+
+        public void agregarPersona(Persona unaPersona) {
+            this.listaPersonas.Add(unaPersona);
+        }
+
+        public void agregarLaboratorio(Laboratorio unLaboratorio) {
+            this.listaLaboratorio.Add(unLaboratorio);   
+        }
     }
 }

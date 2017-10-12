@@ -45,6 +45,7 @@
     <Compile Include="Dominio\Laboratorio.cs" />
     <Compile Include="Dominio\Persona.cs" />
     <Compile Include="Dominio\Reserva.cs" />
+    <Compile Include="Persistencia\BaseDeDatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
