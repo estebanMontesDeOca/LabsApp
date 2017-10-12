@@ -9,6 +9,7 @@ namespace LabsApp.Dominio
     class Reserva
     {
         private Laboratorio lab;
+        private Persona responsable;
 
         public Laboratorio Lab
         {
@@ -20,6 +21,19 @@ namespace LabsApp.Dominio
             {
                 Laboratorio unLab = value;
                 lab = unLab ;
+            }
+        }
+
+        public Persona Responsable
+        {
+            get
+            {
+                return responsable;
+            }
+            set
+            {
+                Persona unResponsable = value;
+                responsable = unResponsable;
             }
         }
     }
