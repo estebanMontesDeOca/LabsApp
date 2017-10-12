@@ -82,9 +82,30 @@ namespace LabsApp.Dominio
             cantSillas = unaCantSillas;
         }
 
+        public override bool Equals(object value)
+        {
+            Laboratorio labAux = value as Laboratorio;
+
+            return numero == labAux.Numero;
+        }
+
         public override string ToString()
         {
             return nombre+"\n"+numero;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 1560022278;
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(nombre);
+            hashCode = hashCode * -1521134295 + numero.GetHashCode();
+            hashCode = hashCode * -1521134295 + cantEquipos.GetHashCode();
+            hashCode = hashCode * -1521134295 + cantSillas.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Nombre);
+            hashCode = hashCode * -1521134295 + Numero.GetHashCode();
+            hashCode = hashCode * -1521134295 + CantEquipos.GetHashCode();
+            hashCode = hashCode * -1521134295 + CantSillas.GetHashCode();
+            return hashCode;
         }
     }
 }
