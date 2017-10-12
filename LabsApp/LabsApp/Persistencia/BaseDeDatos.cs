@@ -9,9 +9,21 @@ namespace LabsApp.Persistencia
 {
     class BaseDeDatos
     {
-        List<Reserva> listaReservas = new List<Reserva>();
-        List<Persona> listaPersonas = new List<Persona>();
-        List<Laboratorio> listaLaboratorio = new List<Laboratorio>();
+        private List<Reserva> listaReservas = new List<Reserva>();
+        private List<Persona> listaPersonas = new List<Persona>();
+        private List<Laboratorio> listaLaboratorio = new List<Laboratorio>();
+
+        public List<Reserva> getListaReservas() {
+            return listaReservas;
+        }
+
+        public List<Persona> getListaPersonas() {
+            return listaPersonas;
+        }
+
+        public List<Laboratorio> getListaLaboratorio() {
+            return listaLaboratorio;
+        }
 
     }
 }
