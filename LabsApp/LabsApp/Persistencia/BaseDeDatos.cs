@@ -36,5 +36,46 @@ namespace LabsApp.Persistencia
         public void agregarLaboratorio(Laboratorio unLaboratorio) {
             this.listaLaboratorio.Add(unLaboratorio);   
         }
+
+        public void eliminarLaboratorio(Laboratorio unLaboratorio) {
+            this.listaLaboratorio.Remove(unLaboratorio);
+        }
+
+        public void eliminarPersona(Persona unaPersona) {
+            this.listaPersonas.Remove(unaPersona);
+        }
+
+        public void eliminarReserva(Reserva unaReserva) {
+            this.listaReservas.Remove(unaReserva);   
+        }
+
+        public Persona obtenerPersona(string unNumero) {
+            Persona retorno = new Persona();
+            foreach (Persona s in listaPersonas) {
+                if (s.Numero.Equals(unNumero)) {
+                    retorno = s;
+                }
+            }
+            return retorno;
+        }
+
+        public Laboratorio obtenerLaboratorio(int unNumero)
+        {
+            Laboratorio retorno = new Laboratorio();
+            foreach (Laboratorio s in listaLaboratorio)
+            {
+                if (s.Numero.Equals(unNumero))
+                {
+                    retorno = s;
+                }
+            }
+            return retorno;
+        }
+
+        public Reserva obtenerReserva()
+        {
+            return new Reserva();
+        }
     }
+
 }
